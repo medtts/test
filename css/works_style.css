@@ -1,0 +1,242 @@
+/*  リセット＆基本設定  */
+:root {
+    --base--color: #1B4965;
+    --accent--color: #FFB703;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    position: relative;
+    font-family: "Shippori Mincho B1", sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; text-align: center; box-shadow: 0 0 10px #ddd;}
+header .logo a { text-decoration: none; font-family: "Alice", sans-serif; font-size: 20px; font-weight: 600; color: #333; }
+header .logo a:hover { text-decoration: underline; }
+
+/*  作品詳細のデザイン  */
+.work-detail-container h1 { 
+    font-family: "Shippori Mincho B1", sans-serif; 
+    font-weight: 600;
+    font-size: 28px; 
+    text-align: center;
+    color: rgb(51, 51, 51);
+}
+
+/* タイトル下のアクセントライン */
+.accent-title {
+    font-family: "Alice", sans-serif;
+    color: rgb(51, 51, 51);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    position: relative;
+    margin-bottom: 16px;
+}
+.accent-title::after {
+    content: '';
+    display: block;
+    width: 40px; 
+    height: 3px; 
+    background-color: var(--accent--color);
+    margin: 10px 0 0 0;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+/* 日本語サブタイトル */
+.accent-sub {
+    font-family: "Shippori Mincho B1", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #666;
+}
+.name {
+    font-family: "Alice", sans-serif;
+    position: relative;
+    color: rgb(51, 51, 51);
+    display: block;
+    text-align: center;
+    position: relative;
+}
+.name::after {
+    content: '';
+    display: block;
+    width: 40px; 
+    height: 3px; 
+    background-color: var(--accent--color);
+    margin: 10px auto 0;
+}
+
+.tech-tag {
+    display: block;
+    text-align: center;
+    background-color: #eee;
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+    margin: 0 auto 30px auto;
+    width: fit-content;
+}
+
+.work-main-imgWrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.work-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.work-imgWrap {
+    height: 500px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+.pc-wrap {
+    width: 60%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px #ddd;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+}
+.sp-wrap {
+    width: 40%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px #ddd;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+}
+.pc-wrap p,
+.sp-wrap p {
+    flex-shrink: 0; /* 縮まないようにする */
+    margin: 10px 0;
+    font-family: "Alice", sans-serif;
+    font-weight: 600;
+}
+/* 画像が入る、スクロールするエリア */
+.scroll-box {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+.work-pc-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.work-sp-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 中央寄せレイアウト */
+.info-center-box, .section-box {
+    margin-bottom: 20px;
+    text-align: left; 
+    box-shadow: 0 0 10px #ddd;
+    border-radius: 10px;
+    padding: 20px 30px;
+    background: #fff;
+}
+.info-item { margin-bottom: 25px; }
+h3 { margin-bottom: 10px; font-size: 22px; }
+.section-text { 
+    color: rgb(102, 102, 102); 
+    font-family: "Shippori Mincho B1", sans-serif; 
+    font-size: 14px;
+    line-height: 1.8;
+    text-indent: 1em;
+}
+/* ツールアイコン用スタイル */
+.tool-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 0px;
+}
+.tool-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+.tool-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+.tool-name {
+    color: rgb(102, 102, 102);
+    font-family: "Shippori Mincho B1", sans-serif;
+}
+/* ボタンデザイン */
+.btn-area { text-align: center; margin-top: 40px; }
+.btn-link { display: inline-block; margin-bottom: 40px; background-color: var(--base--color); color: #fff !important; padding: 12px 30px; border-radius: 30px; font-weight: bold; transition: 0.3s; text-decoration: none; box-shadow: 0 0 10px #ddd; }
+.btn-link:hover { background-color: var(--accent--color); }
+.back-link { display: block; color: #777; text-align: center; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+    header {
+        padding: 16px 20px;
+    }
+    .work-detail-container h1 {
+        font-size: 24px;
+    }
+}
+@media (max-width: 568px) {
+    header {
+        padding: 10px 20px;
+    }
+    .work-detail-container h1 {
+        font-size: 20px;
+    }
+    .work-imgWrap {
+        height: 700px;
+    }
+}
+/* PCサイズの時に2列 */
+@media screen and (min-width: 768px) {
+    .info-center-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        text-align: left;
+    }
+    .info-center-box .info-item {
+        margin-bottom: 0;
+    }
+}

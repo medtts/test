@@ -1,0 +1,44 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #dadada;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #939393;
+}
+
+.main_area {
+    display: flex;
+    justify-content: center;
+}
+
+.txt_area {
+    width: 50%;
+    height: auto;
+    padding: 20px 20px;
+    border: 5px solid lightblue;
+}
+
+.img_area {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    border: 5px solid lightblue;
+}
+
+.img_wrap_pc,
+.img_wrap_sp {
+    width: 300px;
+    height: auto;
+    background-color: #939393;
+    margin: 20px 20px;
+}
+
+.img_wrap_pc img,
+.img_wrap_sp img {
+    width: 100%;
+    height: auto;
+}
